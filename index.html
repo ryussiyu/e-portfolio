@@ -6,20 +6,19 @@
     <title>Ru Xiu | Creative Developer</title>
     <link rel="stylesheet" href="assets/styles.css">
     <script defer src="assets/scripts.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
     <div class="container">
-        <!-- Left Sidebar -->
+        <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="logo" onclick="loadHomePage()">
-                <h1>RU XIU</h1>
+            <div class="logo">
+                <h1><a href="#" id="home-link">RU XIU</a></h1>
                 <p>Creative Developer</p>
             </div>
             <nav class="sidebar-nav">
-                <a href="#" onclick="loadSection('about')"><b>About</b></a>
-                <a href="#" onclick="loadSection('projects')"><b>Projects</b></a>
-                <a href="#" onclick="loadSection('gallery')"><b>Gallery</b></a>
+                <a href="#" class="nav-item" id="about-link">About</a>
+                <a href="#" class="nav-item" id="projects-link">Projects</a>
+                <a href="#" class="nav-item" id="gallery-link">Gallery</a>
             </nav>
             <footer class="sidebar-footer">
                 <p><a href="mailto:sp-ru.xiu.lee@graduate.utm.my">Email</a> · <a href="https://www.instagram.com/ryus.l/">Instagram</a></p>
@@ -28,18 +27,16 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <div id="particles-js" class="background"></div>
-            <div id="dynamic-content" class="content">
-                <!-- Default Content -->
-                <h1 class="title">Hello!</h1>
-                <p class="description">
-                    I'm Ru Xiu,<br>
-                    a passionate Creative Developer,<br>
-                    blending technology and artistry.<br><br>
-                    Explore my journey through <br>
-                    my projects and lomography.<br>
+            <div id="dynamic-content">
+                <h1 class="main-heading">Hello!</h1>
+                <p class="main-description">
+                    <strong><em>I'm Ru Xiu,</em></strong><br>
+                    <strong><em>a passionate Creative Developer,</em></strong><br>
+                    <strong><em>blending technology and artistry.</em></strong><br><br>
+                    <strong><em>Explore my journey through</em></strong><br>
+                    <strong><em>my projects and lomography.</em></strong>
                 </p>
-                <a href="#" class="link-arrow" onclick="loadSection('projects')">Projects ></a>
+                <a href="#" id="projects-link-btn" class="btn">Projects &gt;</a>
             </div>
         </main>
     </div>
