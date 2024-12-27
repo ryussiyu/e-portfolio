@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ru Xiu's Lomography</title>
+    <title>Ru Xiu's E-Portfolio</title>
     <style>
         /* Reset and Base Styles */
         body {
@@ -35,35 +35,76 @@
             margin: 20px 0;
         }
 
-        /* Gallery Section */
-        section.gallery {
-            padding: 50px;
-            background: #fff;
-        }
-
-        section.gallery h2 {
-            text-align: center;
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        nav {
             margin-top: 20px;
         }
 
-        .gallery-grid img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+        nav a {
+            margin: 0 15px;
+            color: white;
+            font-size: 1.2em;
+            text-decoration: none;
         }
 
-        .gallery-grid img:hover {
-            transform: scale(1.05);
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* About Section */
+        section.about {
+            padding: 50px;
+            background: #fff;
+            text-align: center;
+        }
+
+        section.about h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #0056b3;
+        }
+
+        section.about p {
+            line-height: 1.6;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* Projects Section */
+        section.projects {
+            padding: 50px;
+            background: #f4f4f9;
+        }
+
+        section.projects h2 {
+            text-align: center;
+            font-size: 2em;
+            color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        .project-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .project-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            width: 300px;
+        }
+
+        .project-item h3 {
+            color: #333;
+        }
+
+        .project-item p {
+            font-size: 0.9em;
+            line-height: 1.4;
         }
 
         /* Footer */
@@ -87,25 +128,39 @@
 <body>
     <!-- Hero Section -->
     <header>
-        <h1>Ru Xiu's Lomography</h1>
-        <p>Discover the world through my lens</p>
+        <h1>Ru Xiu's E-Portfolio</h1>
+        <p>A showcase of my journey in Computer Science and Lomography</p>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <!-- Gallery Section -->
-    <section class="gallery">
-        <h2>📸 My Gallery</h2>
-        <div class="gallery-grid">
-            <img src="https://via.placeholder.com/400x300" alt="Lomography 1">
-            <img src="https://via.placeholder.com/400x300" alt="Lomography 2">
-            <img src="https://via.placeholder.com/400x300" alt="Lomography 3">
-            <img src="https://via.placeholder.com/400x300" alt="Lomography 4">
-            <img src="https://via.placeholder.com/400x300" alt="Lomography 5">
-            <img src="https://via.placeholder.com/400x300" alt="Lomography 6">
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>👤 About Me</h2>
+        <p>Hi, I’m Ru Xiu, a Computer Science student at UTM with a background in Animation. I am passionate about combining creativity and technology to create unique projects. My interests include game development, design, and lomography.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>💻 Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3>Tamagotchi-Style Game</h3>
+                <p>A collaborative project to create a virtual pet simulation using C++. Focused on learning game logic and programming fundamentals.</p>
+            </div>
+            <div class="project-item">
+                <h3>Lomography Gallery</h3>
+                <p>A collection of my favorite lomography shots, showcasing vibrant and creative moments captured through my lens.</p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
+        <p>Connect with me on Instagram: <a href="https://www.instagram.com/ryus.l/">@ryus.l</a></p>
         <p>© 2024 Ru Xiu | <a href="https://github.com/ryussiyu">GitHub Profile</a></p>
     </footer>
 </body>
