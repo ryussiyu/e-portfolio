@@ -40,7 +40,8 @@ body {
     margin: 10px 0;
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .sidebar-nav a:hover {
@@ -67,17 +68,30 @@ body {
     text-align: center;
 }
 
-/* Button */
-.btn {
-    padding: 10px 20px;
-    background: #ff4c4c;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+/* Hero Title */
+.hero-title {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
-.btn:hover {
-    background: #ff0000;
+/* Hero Text */
+.content p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+/* Clickable Arrow */
+.clickable-arrow {
+    font-size: 1.2rem;
+    color: #ff4c4c;
+    text-decoration: none;
+}
+
+.clickable-arrow:hover {
+    color: #ff0000;
+    text-decoration: underline;
 }
 
 /* Particle.js Background */
@@ -88,45 +102,4 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-}
-
-/* About Section */
-.about-section {
-    padding: 40px;
-    text-align: center;
-    color: white;
-    background: #1f1f1f;
-}
-
-.about-section h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #ff4c4c;
-}
-
-.about-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-/* Lomography Gallery */
-.lomography-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.lomography-gallery img {
-    width: 150px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.lomography-gallery img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
