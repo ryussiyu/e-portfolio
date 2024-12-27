@@ -3,76 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ru Xiu's Lomography</title>
+    <title>Ru Xiu | E-Portfolio</title>
     <style>
-        /* Reset and Base Styles */
-        body {
+        /* General Reset and Base Styles */
+        * {
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Header Section */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Hero Section */
         header {
             background: url('assets/Japan_01.jpg') no-repeat center center/cover;
             height: 100vh;
-            color: white;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             text-align: center;
+            color: white;
         }
 
         header h1 {
-            font-size: 4em;
-            margin: 0;
+            font-size: 4rem;
+            margin-bottom: 10px;
         }
 
         header p {
-            font-size: 1.5em;
-            margin: 20px 0;
-        }
-
-        nav {
-            margin-top: 20px;
-        }
-
-        nav a {
-            margin: 0 15px;
-            color: white;
-            font-size: 1.2em;
-            text-decoration: none;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        /* Gallery Section */
-        section.gallery {
-            padding: 50px;
-            background: #fff;
-        }
-
-        section.gallery h2 {
-            text-align: center;
-            font-size: 2em;
+            font-size: 1.5rem;
             margin-bottom: 20px;
+        }
+
+        header nav a {
+            font-size: 1rem;
+            margin: 0 15px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        header nav a:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
             color: #0056b3;
         }
 
+        section p {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        /* Gallery Section */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
-            margin-top: 20px;
         }
 
         .gallery-grid img {
             width: 100%;
-            height: auto;
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
@@ -92,10 +107,6 @@
 
         footer a {
             color: #fff;
-            text-decoration: none;
-        }
-
-        footer a:hover {
             text-decoration: underline;
         }
     </style>
@@ -103,31 +114,51 @@
 <body>
     <!-- Hero Section -->
     <header>
-        <h1>Ru Xiu's Lomography</h1>
-        <p>A showcase of my journey in Japan and Vietnam</p>
+        <h1>Ru Xiu's E-Portfolio</h1>
+        <p>Explore my journey in Computer Science and Lomography</p>
         <nav>
-            <a href="#about">About Me</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
             <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <h2>📸 My Lomography</h2>
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hi, I’m Ru Xiu, a Computer Science student at UTM with a passion for blending technology and creativity.
+            My background in Animation and interests in game development and lomography inspire my work.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here are a few of my notable works:</p>
         <div class="gallery-grid">
-            <img src="assets/Japan_02.jpg" alt="Japan Photo 2">
-            <img src="assets/Japan_03.jpg" alt="Japan Photo 3">
-            <img src="assets/Japan_04.jpg" alt="Japan Photo 4">
-            <img src="assets/Japan_05.jpg" alt="Japan Photo 5">
-            <img src="assets/Japan_06.jpg" alt="Japan Photo 6">
-            <img src="assets/Japan_07.jpg" alt="Japan Photo 7">
-            <img src="assets/Vietnam_01.jpg" alt="Vietnam Photo 1">
-            <img src="assets/Vietnam_02.jpg" alt="Vietnam Photo 2">
-            <img src="assets/Vietnam_03.jpg" alt="Vietnam Photo 3">
-            <img src="assets/Vietnam_04.jpg" alt="Vietnam Photo 4">
-            <img src="assets/Vietnam_05.jpg" alt="Vietnam Photo 5">
-            <img src="assets/Vietnam_06.jpg" alt="Vietnam Photo 6">
+            <div>
+                <h3>Tamagotchi-Style Game</h3>
+                <p>A collaborative project using C++ to create a virtual pet simulation.</p>
+            </div>
+            <div>
+                <h3>Lomography Series</h3>
+                <p>A curated collection of lomography moments captured in Japan and Vietnam.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+            <img src="assets/Japan_02.jpg" alt="Lomography Japan 1">
+            <img src="assets/Japan_03.jpg" alt="Lomography Japan 2">
+            <img src="assets/Japan_04.jpg" alt="Lomography Japan 3">
+            <img src="assets/Vietnam_01.jpg" alt="Lomography Vietnam 1">
+            <img src="assets/Vietnam_02.jpg" alt="Lomography Vietnam 2">
+            <img src="assets/Vietnam_03.jpg" alt="Lomography Vietnam 3">
         </div>
     </section>
 
