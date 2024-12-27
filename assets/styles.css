@@ -1,37 +1,85 @@
-<style>
-    body {
-        background: #121212;
-        color: white;
-        font-family: Arial, sans-serif;
-    }
-    .container {
-        display: flex;
-        height: 100vh;
-    }
-    .sidebar {
-        width: 20%;
-        background: #1f1f1f;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 20px;
-    }
-    .main-content {
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-    }
-    .btn {
-        padding: 10px 20px;
-        background: white;
-        color: black;
-        text-decoration: none;
-    }
-</style>
+/* General Body Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+}
 
+/* Container */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 20%;
+    background: #1f1f1f;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.sidebar .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.sidebar .logo p {
+    margin: 0;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+.sidebar-nav a {
+    display: block;
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.sidebar-nav a:hover {
+    color: #ff4c4c;
+}
+
+.sidebar-footer p {
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+.sidebar-footer a {
+    color: #ff4c4c;
+    text-decoration: none;
+}
+
+/* Main Content */
+.main-content {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Button */
+.btn {
+    padding: 10px 20px;
+    background: #ff4c4c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #ff0000;
+}
+
+/* Particle.js Background */
 #particles-js {
     position: absolute;
     width: 100%;
@@ -41,3 +89,7 @@
     z-index: -1;
 }
 
+/* Content Styling */
+.content {
+    text-align: center;
+}
