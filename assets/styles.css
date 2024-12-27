@@ -70,21 +70,21 @@ body {
 
 /* Hero Title */
 .hero-title {
-    font-size: 6rem;
+    font-size: 3.5rem; /* Adjusted to match screenshot */
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
 
-/* Hero Text */
-.content p {
-    font-size: 1.5rem;
+/* Hero Description */
+.hero-description {
+    font-size: 1.2rem; /* Smaller text as requested */
     line-height: 1.8;
     margin-bottom: 30px;
 }
 
 /* Clickable Arrow */
 .clickable-arrow {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Adjusted size for "Projects >" */
     color: #ff4c4c;
     text-decoration: none;
 }
