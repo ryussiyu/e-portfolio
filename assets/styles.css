@@ -1,19 +1,18 @@
-/* General Body Styles */
+/* General Styling */
 body {
-    margin: 0;
-    padding: 0;
     background: #121212;
     color: white;
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Container */
 .container {
     display: flex;
     height: 100vh;
 }
 
-/* Sidebar */
+/* Sidebar Styling */
 .sidebar {
     width: 20%;
     background: #1f1f1f;
@@ -24,41 +23,25 @@ body {
     padding: 20px;
 }
 
-.sidebar .logo h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.sidebar .logo p {
-    margin: 0;
-    font-size: 14px;
-    color: #aaaaaa;
-}
-
 .sidebar-nav a {
-    display: block;
-    margin: 10px 0;
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    margin: 15px 0;
     font-weight: bold;
+    display: block;
 }
 
-.sidebar-nav a:hover {
-    color: #ff4c4c;
-}
-
-.sidebar-footer p {
-    font-size: 14px;
-    color: #aaaaaa;
+.sidebar-footer {
+    text-align: center;
+    margin-top: auto;
 }
 
 .sidebar-footer a {
-    color: #ff4c4c;
+    color: white;
     text-decoration: none;
 }
 
-/* Main Content */
+/* Main Content Styling */
 .main-content {
     width: 80%;
     display: flex;
@@ -68,33 +51,6 @@ body {
     text-align: center;
 }
 
-/* Hero Title */
-.hero-title {
-    font-size: 3.5rem; /* Adjusted to match screenshot */
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-/* Hero Description */
-.hero-description {
-    font-size: 1.2rem; /* Smaller text as requested */
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-/* Clickable Arrow */
-.clickable-arrow {
-    font-size: 1rem; /* Adjusted size for "Projects >" */
-    color: #ff4c4c;
-    text-decoration: none;
-}
-
-.clickable-arrow:hover {
-    color: #ff0000;
-    text-decoration: underline;
-}
-
-/* Particle.js Background */
 #particles-js {
     position: absolute;
     width: 100%;
@@ -102,4 +58,44 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+.title {
+    font-size: 3rem;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.link-arrow {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/* Sections Styling */
+.section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-item img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-item h3 {
+    font-size: 1.2rem;
+    color: white;
 }
