@@ -6,54 +6,90 @@
     <title>Ru Xiu's E-Portfolio</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
             margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
             color: #333;
         }
 
         header {
-            text-align: center;
-            padding: 20px;
-            background: #0056b3;
+            background: url('https://scontent.fkul5-3.fna.fbcdn.net/v/t39.30808-6/468955694_10161185061389737_3338793373557498522_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cf85f3&_nc_ohc=-G2_yW2CZtQQ7kNvgFTvP-H&_nc_zt=23&_nc_ht=scontent.fkul5-3.fna&_nc_gid=AhW7q-u97uco6JtejspIqq1&oh=00_AYDk6Kbt7UQn92Yw8rU_QqmUnd31_DZtvKhHhGSLgH0ixA&oe=67744FF1') no-repeat center center/cover;
             color: white;
+            text-align: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
         }
 
         header h1 {
+            font-size: 3em;
             margin: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #0056b3;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
         }
 
         section {
-            margin: 20px;
-            padding: 20px;
+            padding: 40px 20px;
+            text-align: center;
             background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        h2 {
+        section h2 {
             color: #0056b3;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            line-height: 1.6;
         }
 
         footer {
             text-align: center;
-            margin-top: 20px;
-            padding: 10px;
+            padding: 20px;
             background: #333;
             color: white;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: 40px;
         }
 
-        a {
-            color: #0056b3;
+        footer a {
+            color: #fff;
             text-decoration: none;
         }
 
-        a:hover {
+        footer a:hover {
             text-decoration: underline;
         }
     </style>
@@ -61,29 +97,32 @@
 <body>
     <header>
         <h1>Ru Xiu's E-Portfolio</h1>
-        <p>Welcome to my e-portfolio, a glimpse into my journey in Computer Science.</p>
+        <p>A showcase of my journey in Computer Science and Lomography</p>
     </header>
 
-    <section>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
         <h2>👤 About Me</h2>
-        <ul>
-            <li><b>Name:</b> Ru Xiu</li>
-            <li><b>Education:</b> Bachelor’s in Computer Science (Software Engineering), UTM</li>
-            <li><b>Background:</b> Diploma in Animation</li>
-            <li><b>Interests:</b> Game development, animation, and creative design</li>
-        </ul>
+        <p>Hi, I’m Ru Xiu, a Computer Science student at UTM with a background in Animation. I love combining creativity and technology to build meaningful projects. My interests include game development, design, and exploring lomography.</p>
     </section>
 
-    <section>
-        <h2>🎮 Personal Project</h2>
-        <p>
-            <b>Tamagotchi-style Game (Work-in-Progress):</b><br>
-            A collaborative project where I am learning C++ and game logic to create a virtual pet simulation.
-        </p>
+    <section id="projects">
+        <h2>💻 Projects</h2>
+        <p><b>Tamagotchi-Style Game (Work-in-Progress):</b> A collaborative project using C++ to create a virtual pet simulation. This project focuses on learning game logic and improving my programming fundamentals.</p>
+    </section>
+
+    <section id="contact">
+        <h2>📬 Contact Me</h2>
+        <p>Connect with me on Instagram: <a href="https://www.instagram.com/ryus.l/">@ryus.l</a></p>
     </section>
 
     <footer>
-        <p>Visit my <a href="https://github.com/ryussiyu">GitHub Profile</a> for more details.</p>
+        <p>© 2024 Ru Xiu | <a href="https://github.com/ryussiyu">GitHub Profile</a></p>
     </footer>
 </body>
 </html>
