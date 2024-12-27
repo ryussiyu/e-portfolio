@@ -16,9 +16,9 @@
                 <p>Creative Developer</p>
             </div>
             <nav class="sidebar-nav">
-                <a href="#" class="nav-item" id="about-link">About</a>
-                <a href="#" class="nav-item" id="projects-link">Projects</a>
-                <a href="#" class="nav-item" id="gallery-link">Gallery</a>
+                <a href="#about" class="nav-item" id="about-link">About</a>
+                <a href="#projects" class="nav-item" id="projects-link">Projects</a>
+                <a href="#gallery" class="nav-item" id="gallery-link">Gallery</a>
             </nav>
             <footer class="sidebar-footer">
                 <p><a href="mailto:sp-ru.xiu.lee@graduate.utm.my">Email</a> · <a href="https://www.instagram.com/ryus.l/">Instagram</a></p>
@@ -27,7 +27,6 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <!-- Dynamic Content -->
             <div id="dynamic-content">
                 <h1 class="main-heading">Hello!</h1>
                 <p class="main-description">
@@ -37,65 +36,78 @@
                     <strong>Explore my journey through</strong><br>
                     <strong>my projects and lomography.</strong>
                 </p>
-                <a href="#" id="projects-link-btn" class="btn">Projects &gt;</a>
+                <a href="#projects" id="projects-link-btn" class="btn">Projects &gt;</a>
             </div>
-
-            <!-- About Section -->
-            <section id="about" class="hidden">
-                <h1>About</h1>
-                <p>Hello! I'm Ru Xiu, a creative developer...</p>
-                <!-- Additional About content here -->
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="hidden">
-                <h1>Projects</h1>
-                <div class="project-item">
-                    <h2>Kisha's Story - Life with Atopic Dermatitis</h2>
-                    <!-- Project details here -->
-                </div>
-            </section>
-
-            <!-- Gallery Section -->
-            <section id="gallery" class="hidden">
-                <h1>Gallery</h1>
-                <p>Your gallery content goes here.</p>
-            </section>
         </main>
     </div>
 
-    <script>
-        // JavaScript to toggle visibility between sections
-        const homeLink = document.getElementById('home-link');
-        const aboutLink = document.getElementById('about-link');
-        const projectsLink = document.getElementById('projects-link');
-        const galleryLink = document.getElementById('gallery-link');
-        const dynamicContent = document.getElementById('dynamic-content');
-        const aboutSection = document.getElementById('about');
-        const projectsSection = document.getElementById('projects');
-        const gallerySection = document.getElementById('gallery');
+    <!-- About Section -->
+    <section id="about">
+        <div class="content">
+            <h1>About</h1>
+            <p>
+                Hello! I'm Ru Xiu, a creative developer with a background in animation and a passion for blending technology and artistry.
+                Currently pursuing my Bachelor's in Computer Science - Software Engineering at UTM, I strive to combine technical
+                skills with design expertise to create unique digital experiences.
+            </p>
+            <p>
+                <strong>Education:</strong><br>
+                - Bachelor's in Computer Science - Software Engineering at UTM.<br>
+                - Diploma in Animation.
+            </p>
+            <p>
+                <strong>Skills & Tools:</strong><br>
+                - Programming: C++ (Beginner).<br>
+                - Design Tools: Adobe Illustrator, Photoshop, After Effects, Premiere Pro.<br>
+                - Currently Learning: Figma (design prototyping).
+            </p>
+            <p>
+                <strong>Learning List:</strong><br>
+                - Tools: Unity (game development) and Blender (3D modeling and animation).
+            </p>
+            <p>
+                <strong>Hobbies:</strong><br>
+                - Photography: I enjoy exploring lomography for its creative and artistic aspects. Additionally, I use my Sony NEX-6 to
+                capture high-quality, vibrant images that document everyday life and travels.
+            </p>
+            <p>
+                <strong>Goals:</strong><br>
+                - My goal is to develop creative games, starting with a Tamagotchi-style project, and expand my expertise in digital art
+                and development.
+            </p>
+        </div>
+    </section>
 
-        // Helper function to show a section and hide others
-        function showSection(sectionToShow) {
-            dynamicContent.classList.add('hidden');
-            aboutSection.classList.add('hidden');
-            projectsSection.classList.add('hidden');
-            gallerySection.classList.add('hidden');
-
-            sectionToShow.classList.remove('hidden');
-        }
-
-        // Event listeners for navigation
-        homeLink.addEventListener('click', () => {
-            dynamicContent.classList.remove('hidden');
-            aboutSection.classList.add('hidden');
-            projectsSection.classList.add('hidden');
-            gallerySection.classList.add('hidden');
-        });
-
-        aboutLink.addEventListener('click', () => showSection(aboutSection));
-        projectsLink.addEventListener('click', () => showSection(projectsSection));
-        galleryLink.addEventListener('click', () => showSection(gallerySection));
-    </script>
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="project-item">
+            <h2>Kisha's Story - Life with Atopic Dermatitis</h2>
+            <p>
+                <strong>Role:</strong> Project Lead (2-person team)<br>
+                <strong>Description:</strong><br>
+                This project brought Kisha's story to life through engaging animation and creative storytelling. Working closely with the client, I led the end-to-end process, which included:
+            </p>
+            <ul>
+                <li>Designing characters and stylistic elements to match the client’s vision.</li>
+                <li>Creating vibrant and immersive backgrounds.</li>
+                <li>Developing a detailed storyboard to map out Kisha’s journey visually.</li>
+                <li>Animating the scenes while ensuring smooth transitions and lively movements.</li>
+                <li>Adding sound effects (SFX), music, and voiceovers to enhance the emotional depth.</li>
+                <li>Delivering a final rendered video, perfectly aligned with the client's expectations.</li>
+            </ul>
+            <p>
+                <strong>Stage Process:</strong><br>
+                1. Client briefing and style direction.<br>
+                2. Character design, background creation, and storyboard development.<br>
+                3. Scene animation and dynamic transitions.<br>
+                4. Final rendering with music, sound effects, and voiceovers.<br>
+            </p>
+            <p>
+                <strong>Watch Video:</strong><br>
+                <a href="https://youtu.be/3eZkL4cM98c" target="_blank">Watch Kisha's Story on YouTube</a>
+            </p>
+            <img src="assets/SS_kisha_sanofi.png" alt="Kisha's Story Screenshot" style="width: 100%; max-width: 600px; margin-top: 20px;">
+        </div>
+    </section>
 </body>
 </html>
