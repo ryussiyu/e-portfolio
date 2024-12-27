@@ -1,4 +1,4 @@
-/* General Styling */
+/* General Styles */
 body {
     background: #121212;
     color: white;
@@ -7,76 +7,85 @@ body {
     padding: 0;
 }
 
+/* Container */
 .container {
     display: flex;
     height: 100vh;
 }
 
-/* Sidebar Styling */
+/* Sidebar */
 .sidebar {
     width: 20%;
     background: #1f1f1f;
-    color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
-    cursor: pointer;
 }
 
-.sidebar-nav a {
+.logo h1 a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-nav .nav-item {
     color: white;
     text-decoration: none;
     margin: 15px 0;
     font-weight: bold;
     display: block;
-    cursor: pointer;
+    transition: all 0.3s;
 }
 
-.sidebar-footer {
-    text-align: center;
-    margin-top: auto;
+.sidebar-nav .nav-item:hover {
+    color: #ff6600;
+    transform: scale(1.1);
 }
 
-.sidebar-footer a {
+/* Sidebar Footer */
+.sidebar-footer p a {
     color: white;
     text-decoration: none;
 }
 
-/* Main Content Styling */
+.sidebar-footer p a:hover {
+    color: #ff6600;
+}
+
+/* Main Content */
 .main-content {
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
+}
+
+#dynamic-content {
     text-align: center;
 }
 
-#particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: -1;
+.main-heading {
+    font-size: 4rem;
+    margin: 0;
 }
 
-.title {
-    font-size: 3rem;
-    font-weight: bold;
-}
-
-.description {
+.main-description {
+    margin: 20px 0;
     font-size: 1.2rem;
-    margin-top: 10px;
-    font-weight: 600;
+    line-height: 1.6;
 }
 
-.link-arrow {
-    color: white;
-    text-decoration: none;
+.btn {
     font-size: 1rem;
-    margin-top: 20px;
-    display: inline-block;
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: semibold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    text-decoration: underline;
+    color: white;
 }
