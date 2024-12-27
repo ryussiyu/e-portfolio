@@ -4,130 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ru Xiu | Creative Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/styles.css">
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #121212;
-            color: white;
-        }
-
-        .container {
-            display: flex;
-            height: 100vh;
-        }
-
-        /* Sidebar Styles */
-        .sidebar {
-            width: 20%;
-            background: #1f1f1f;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        .logo h1 {
-            color: #ffffff;
-            font-size: 1.5em;
-        }
-
-        .logo h1 a {
-            text-decoration: none;
-            color: #ffffff;
-        }
-
-        .sidebar-nav a {
-            color: white;
-            text-decoration: none;
-            margin: 10px 0;
-            font-weight: bold;
-            display: block;
-            transition: color 0.3s ease;
-        }
-
-        .sidebar-nav a:hover {
-            color: #ff4d4d;
-        }
-
-        .sidebar-footer a {
-            color: #ffffff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .sidebar-footer a:hover {
-            color: #ff4d4d;
-        }
-
-        /* Main Content Styles */
-        .main-content {
-            width: 80%;
-            overflow-y: auto;
-            padding: 20px;
-            position: relative;
-            animation: fadeIn 0.5s ease;
-        }
-
-        .content-section {
-            display: none;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-
-        .content-section.active {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        h1 {
-            color: #ffffff;
-        }
-
-        a {
-            color: #ff4d4d;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const links = document.querySelectorAll('.sidebar-nav a');
-            const sections = document.querySelectorAll('.content-section');
-
-            links.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    sections.forEach(section => {
-                        section.classList.remove('active');
-                    });
-                    const target = e.target.getAttribute('href').replace('#', '');
-                    document.getElementById(target).classList.add('active');
-                });
-            });
-
-            // Default to "About" section
-            document.getElementById('about').classList.add('active');
-        });
-    </script>
+    <script defer src="assets/scripts.js"></script>
 </head>
 <body>
     <div class="container">
@@ -138,9 +17,9 @@
                 <p>Creative Developer</p>
             </div>
             <nav class="sidebar-nav">
-                <a href="#about">About</a>
-                <a href="#projects">Projects</a>
-                <a href="#gallery">Gallery</a>
+                <a href="#about" class="nav-item" id="about-link">About</a>
+                <a href="#projects" class="nav-item" id="projects-link">Projects</a>
+                <a href="#gallery" class="nav-item" id="gallery-link">Gallery</a>
             </nav>
             <footer class="sidebar-footer">
                 <p><a href="mailto:sp-ru.xiu.lee@graduate.utm.my">Email</a> · <a href="https://www.instagram.com/ryus.l/">Instagram</a></p>
@@ -149,54 +28,187 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <section id="about" class="content-section">
-                <h1>About</h1>
-                <p>Hello! I'm Ru Xiu, a creative developer with a background in animation and a passion for blending technology and artistry. Currently pursuing my Bachelor's in Computer Science - Software Engineering at UTM, I strive to combine technical skills with design expertise to create unique digital experiences.</p>
-                <p><strong>Education:</strong></p>
-                <ul>
-                    <li>Bachelor's in Computer Science - Software Engineering at UTM</li>
-                    <li>Diploma in Animation</li>
-                </ul>
-                <p><strong>Skills & Tools:</strong></p>
-                <ul>
-                    <li>Programming: C++ (Beginner)</li>
-                    <li>Design Tools: Adobe Illustrator, Photoshop, After Effects, Premiere Pro</li>
-                    <li>Currently Learning: Figma (design prototyping)</li>
-                </ul>
-            </section>
-
-            <section id="projects" class="content-section">
-                <h1>Projects</h1>
-                <div class="project-item">
-                    <h2>Kisha's Story - Life with Atopic Dermatitis</h2>
-                    <p><strong>Role:</strong> Project Lead (2-person team)</p>
-                    <p><strong>Description:</strong> This project brought Kisha's story to life through engaging animation and creative storytelling. Working closely with the client, I led the end-to-end process, which included:</p>
-                    <ul>
-                        <li>Designing characters and stylistic elements to match the client’s vision.</li>
-                        <li>Creating vibrant and immersive backgrounds.</li>
-                        <li>Developing a detailed storyboard to map out Kisha’s journey visually.</li>
-                        <li>Animating the scenes while ensuring smooth transitions and lively movements.</li>
-                        <li>Adding sound effects (SFX), music, and voiceovers to enhance the emotional depth.</li>
-                        <li>Delivering a final rendered video, perfectly aligned with the client's expectations.</li>
-                    </ul>
-                    <p><strong>Stage Process:</strong></p>
-                    <ol>
-                        <li>Client briefing and style direction</li>
-                        <li>Character design, background creation, and storyboard development</li>
-                        <li>Scene animation and dynamic transitions</li>
-                        <li>Final rendering with music, sound effects, and voiceovers</li>
-                    </ol>
-                    <p><strong>Watch Video:</strong> <a href="https://youtu.be/3eZkL4cM98c" target="_blank">Watch Kisha's Story on YouTube</a></p>
-                    <img src="assets/SS_kisha_sanofi.png" alt="Kisha's Story Screenshot" style="width: 100%; max-width: 600px; margin-top: 20px;">
+            <div id="dynamic-content">
+                <!-- Main Page Content -->
+                <div id="main-page" class="content-section active">
+                    <div id="particles-js" class="background"></div>
+                    <div class="content">
+                        <h1 class="title">Hello!</h1>
+                        <p class="description">
+                            <b><i>I'm Ru Xiu,</i></b> <br>
+                            <b><i>a passionate Creative Developer</i></b>, <br>
+                            <b><i>blending technology and artistry.</i></b> <br>
+                            Explore my journey through projects and lomography.
+                        </p>
+                        <a href="#projects" class="link-arrow">Projects ></a>
+                    </div>
                 </div>
-            </section>
 
-            <section id="gallery" class="content-section">
-                <h1>Gallery</h1>
-                <p>Explore my collection of lomography and photography captured with my Sony NEX-6.</p>
-                <!-- Add your images or gallery items here -->
-            </section>
+                <!-- About Section -->
+                <div id="about" class="content-section">
+                    <h1>About</h1>
+                    <p>Hello! I'm Ru Xiu, a creative developer with a background in animation and a passion for blending technology and artistry. Currently pursuing my Bachelor's in Computer Science - Software Engineering at UTM, I strive to combine technical skills with design expertise to create unique digital experiences.</p>
+                    <p><strong>Education:</strong></p>
+                    <ul>
+                        <li>Bachelor's in Computer Science - Software Engineering at UTM</li>
+                        <li>Diploma in Animation</li>
+                    </ul>
+                    <p><strong>Skills & Tools:</strong></p>
+                    <ul>
+                        <li>Programming: C++ (Beginner)</li>
+                        <li>Design Tools: Adobe Illustrator, Photoshop, After Effects, Premiere Pro</li>
+                        <li>Currently Learning: Figma (design prototyping)</li>
+                    </ul>
+                </div>
+
+                <!-- Projects Section -->
+                <div id="projects" class="content-section">
+                    <h1>Projects</h1>
+                    <div class="project-item">
+                        <h2>Kisha's Story - Life with Atopic Dermatitis</h2>
+                        <p><strong>Role:</strong> Project Lead (2-person team)</p>
+                        <p><strong>Description:</strong> This project brought Kisha's story to life through engaging animation and creative storytelling. Working closely with the client, I led the end-to-end process, which included:</p>
+                        <ul>
+                            <li>Designing characters and stylistic elements to match the client’s vision.</li>
+                            <li>Creating vibrant and immersive backgrounds.</li>
+                            <li>Developing a detailed storyboard to map out Kisha’s journey visually.</li>
+                            <li>Animating the scenes while ensuring smooth transitions and lively movements.</li>
+                            <li>Adding sound effects (SFX), music, and voiceovers to enhance the emotional depth.</li>
+                            <li>Delivering a final rendered video, perfectly aligned with the client's expectations.</li>
+                        </ul>
+                        <p><strong>Stage Process:</strong></p>
+                        <ol>
+                            <li>Client briefing and style direction</li>
+                            <li>Character design, background creation, and storyboard development</li>
+                            <li>Scene animation and dynamic transitions</li>
+                            <li>Final rendering with music, sound effects, and voiceovers</li>
+                        </ol>
+                        <p><strong>Watch Video:</strong> <a href="https://youtu.be/3eZkL4cM98c" target="_blank">Watch Kisha's Story on YouTube</a></p>
+                        <img src="assets/SS_kisha_sanofi.png" alt="Kisha's Story Screenshot" style="width: 100%; max-width: 600px; margin-top: 20px;">
+                    </div>
+                </div>
+
+                <!-- Gallery Section -->
+                <div id="gallery" class="content-section">
+                    <h1>Gallery</h1>
+                    <p>Explore my collection of lomography and photography captured with my Sony NEX-6.</p>
+                    <!-- Add your images or gallery items here -->
+                </div>
+            </div>
         </main>
     </div>
+
+    <style>
+        body {
+            font-family: 'Work Sans', Arial, sans-serif;
+            margin: 0;
+            background-color: #121212;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 20%;
+            background: #1f1f1f;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .main-content {
+            width: 80%;
+            overflow-y: auto;
+            padding: 20px;
+            background: #121212;
+            color: white;
+        }
+
+        .content-section {
+            display: none;
+            font-size: 0.9em; /* Reduced size for all content sections */
+        }
+
+        .content-section.active {
+            display: block;
+        }
+
+        .sidebar-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            font-family: 'Work Sans', Arial, sans-serif;
+        }
+
+        .sidebar-nav a:hover {
+            text-decoration: underline;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 2.2em; /* Slightly reduced size for title */
+            font-family: 'Work Sans', Arial, sans-serif;
+        }
+
+        .description {
+            font-size: 1em; /* Reduced size for description */
+            font-family: 'Work Sans', Arial, sans-serif;
+        }
+
+        .link-arrow {
+            font-size: 0.9em; /* Reduced size for link-arrow */
+            color: white;
+            text-decoration: none;
+            font-family: 'Work Sans', Arial, sans-serif;
+        }
+
+        .link-arrow:hover {
+            color: red;
+        }
+    </style>
+
+    <script>
+        document.querySelectorAll('.sidebar-nav a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                document.querySelectorAll('.content-section').forEach(section => {
+                    section.classList.remove('active');
+                });
+                document.getElementById('main-page').classList.remove('active');
+                const target = e.target.getAttribute('href').replace('#', '');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+
+        document.getElementById('home-link').addEventListener('click', (e) => {
+            e.preventDefault();
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById('main-page').classList.add('active');
+        });
+
+        // Default to "main-page" section
+        document.getElementById('main-page').classList.add('active');
+    </script>
 </body>
 </html>
