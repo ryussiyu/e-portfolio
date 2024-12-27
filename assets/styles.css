@@ -17,6 +17,7 @@ body {
 .sidebar {
     width: 20%;
     background: #1f1f1f;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -60,6 +61,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 
 #dynamic-content {
@@ -68,7 +70,6 @@ body {
 
 .main-heading {
     font-size: 4rem;
-    margin: 0;
 }
 
 .main-description {
@@ -88,4 +89,31 @@ body {
 .btn:hover {
     text-decoration: underline;
     color: white;
+}
+
+/* About Section */
+#about {
+    padding: 50px;
+    color: white;
+    background-color: #1f1f1f;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+#about p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+#about strong {
+    font-size: 1.2rem;
+    color: #e6e6e6;
 }
