@@ -4,175 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ru Xiu | E-Portfolio</title>
-    <style>
-        /* General Reset and Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* Hero Section */
-        header {
-            background: url('assets/Japan_01.jpg') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-        }
-
-        header h1 {
-            font-size: 4rem;
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        header nav a {
-            font-size: 1rem;
-            margin: 0 15px;
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
-            transition: all 0.3s;
-        }
-
-        header nav a:hover {
-            background: rgba(255, 255, 255, 0.4);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 50px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #0056b3;
-        }
-
-        section p {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        /* Projects Section */
-        .project-item {
-            background: #fff;
-            padding: 20px;
-            margin: 10px 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .project-item h3 {
-            color: #333;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-
-        .project-item p {
-            font-size: 0.9rem;
-        }
-
-        /* Gallery Section */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-
-        .gallery-grid img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .gallery-grid img:hover {
-            transform: scale(1.05);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-        }
-
-        footer a {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        footer a:hover {
-            color: #aaa;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <header>
-        <h1>Ru Xiu's E-Portfolio</h1>
-        <p>Discover my journey in Computer Science and Lomography</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Navigation -->
+    <header class="c-navigation">
+        <div class="c-navigation__header">
+            <a href="/" class="c-navigation__logo" title="Ru Xiu">
+                <div class="c-navigation__logo-pieces">
+                    <span class="c-navigation__logo-text">Ru Xiu</span>
+                </div>
+            </a>
+            <nav class="c-navigation__primary">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero__content">
+            <h1>Welcome to My E-Portfolio</h1>
+            <p>Discover my journey in Computer Science and Lomography.</p>
+        </div>
+    </section>
+
     <!-- About Section -->
-    <section id="about">
+    <section id="about" class="section">
         <h2>About Me</h2>
-        <p>
-            Hi, I’m Ru Xiu, a Computer Science student at UTM with a background in Animation. My passion lies in merging
-            creativity and technology, reflected in my work in game development, design, and lomography.
-        </p>
+        <p>I’m Ru Xiu, a Computer Science student at UTM. My background in Animation and my passion for creativity drive my work in game development, design, and photography.</p>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects">
+    <section id="projects" class="section">
         <h2>Projects</h2>
-        <div class="project-item">
-            <h3>Tamagotchi-Style Game</h3>
-            <p>A collaborative project using C++ to create a virtual pet simulation. This project helped me explore game
-                logic and strengthen my programming skills.</p>
-        </div>
-        <div class="project-item">
-            <h3>Lomography Collection</h3>
-            <p>A curated collection of lomography photos showcasing moments captured in Japan and Vietnam.</p>
+        <div class="projects__list">
+            <div class="projects__item">
+                <h3>Tamagotchi-Style Game</h3>
+                <p>A collaborative project using C++ to create a virtual pet simulation. Focused on learning game logic and programming.</p>
+            </div>
+            <div class="projects__item">
+                <h3>Lomography Collection</h3>
+                <p>A curated collection of lomography moments captured in Japan and Vietnam.</p>
+            </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery">
+    <section id="gallery" class="section gallery">
         <h2>Gallery</h2>
-        <div class="gallery-grid">
+        <div class="gallery__grid">
             <img src="assets/Japan_02.jpg" alt="Japan 2">
             <img src="assets/Japan_03.jpg" alt="Japan 3">
             <img src="assets/Japan_04.jpg" alt="Japan 4">
@@ -183,7 +67,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer id="contact" class="footer">
         <p>Connect with me on Instagram: <a href="https://www.instagram.com/ryus.l/">@ryus.l</a></p>
         <p>© 2024 Ru Xiu | <a href="https://github.com/ryussiyu">GitHub Profile</a></p>
     </footer>
