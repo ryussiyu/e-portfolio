@@ -14,10 +14,9 @@
 
         body {
             font-family: 'Arial', sans-serif;
-            line-height: 1.6;
             background-color: #f9f9f9;
             color: #333;
-            margin: 0;
+            line-height: 1.6;
         }
 
         a {
@@ -30,9 +29,9 @@
             background: url('assets/Japan_01.jpg') no-repeat center center/cover;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             text-align: center;
             color: white;
         }
@@ -79,6 +78,25 @@
             margin-bottom: 30px;
         }
 
+        /* Projects Section */
+        .project-item {
+            background: #fff;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-item h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .project-item p {
+            font-size: 0.9rem;
+        }
+
         /* Gallery Section */
         .gallery-grid {
             display: grid;
@@ -109,13 +127,17 @@
             color: #fff;
             text-decoration: underline;
         }
+
+        footer a:hover {
+            color: #aaa;
+        }
     </style>
 </head>
 <body>
     <!-- Hero Section -->
     <header>
         <h1>Ru Xiu's E-Portfolio</h1>
-        <p>Explore my journey in Computer Science and Lomography</p>
+        <p>Discover my journey in Computer Science and Lomography</p>
         <nav>
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
@@ -128,24 +150,22 @@
     <section id="about">
         <h2>About Me</h2>
         <p>
-            Hi, I’m Ru Xiu, a Computer Science student at UTM with a passion for blending technology and creativity.
-            My background in Animation and interests in game development and lomography inspire my work.
+            Hi, I’m Ru Xiu, a Computer Science student at UTM with a background in Animation. My passion lies in merging
+            creativity and technology, reflected in my work in game development, design, and lomography.
         </p>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <p>Here are a few of my notable works:</p>
-        <div class="gallery-grid">
-            <div>
-                <h3>Tamagotchi-Style Game</h3>
-                <p>A collaborative project using C++ to create a virtual pet simulation.</p>
-            </div>
-            <div>
-                <h3>Lomography Series</h3>
-                <p>A curated collection of lomography moments captured in Japan and Vietnam.</p>
-            </div>
+        <div class="project-item">
+            <h3>Tamagotchi-Style Game</h3>
+            <p>A collaborative project using C++ to create a virtual pet simulation. This project helped me explore game
+                logic and strengthen my programming skills.</p>
+        </div>
+        <div class="project-item">
+            <h3>Lomography Collection</h3>
+            <p>A curated collection of lomography photos showcasing moments captured in Japan and Vietnam.</p>
         </div>
     </section>
 
@@ -153,12 +173,12 @@
     <section id="gallery">
         <h2>Gallery</h2>
         <div class="gallery-grid">
-            <img src="assets/Japan_02.jpg" alt="Lomography Japan 1">
-            <img src="assets/Japan_03.jpg" alt="Lomography Japan 2">
-            <img src="assets/Japan_04.jpg" alt="Lomography Japan 3">
-            <img src="assets/Vietnam_01.jpg" alt="Lomography Vietnam 1">
-            <img src="assets/Vietnam_02.jpg" alt="Lomography Vietnam 2">
-            <img src="assets/Vietnam_03.jpg" alt="Lomography Vietnam 3">
+            <img src="assets/Japan_02.jpg" alt="Japan 2">
+            <img src="assets/Japan_03.jpg" alt="Japan 3">
+            <img src="assets/Japan_04.jpg" alt="Japan 4">
+            <img src="assets/Vietnam_01.jpg" alt="Vietnam 1">
+            <img src="assets/Vietnam_02.jpg" alt="Vietnam 2">
+            <img src="assets/Vietnam_03.jpg" alt="Vietnam 3">
         </div>
     </section>
 
