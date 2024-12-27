@@ -5,7 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ru Xiu | Creative Developer</title>
     <link rel="stylesheet" href="assets/styles.css">
-    <script defer src="assets/scripts.js"></script>
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('.content-section');
+            const mainPage = document.getElementById('main-page');
+            const navLinks = document.querySelectorAll('.sidebar-nav a');
+            const homeLink = document.getElementById('home-link');
+
+            // Sidebar navigation functionality
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    sections.forEach(section => section.classList.remove('active'));
+                    mainPage.classList.remove('active');
+
+                    const targetId = link.getAttribute('href').substring(1);
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            // Home link functionality
+            homeLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                sections.forEach(section => section.classList.remove('active'));
+                mainPage.classList.add('active');
+            });
+
+            // Default active section
+            mainPage.classList.add('active');
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -16,9 +45,9 @@
                 <p>Creative Developer</p>
             </div>
             <nav class="sidebar-nav">
-                <a href="#" class="nav-item" id="about-link">About</a>
-                <a href="#" class="nav-item" id="projects-link">Projects</a>
-                <a href="#" class="nav-item" id="gallery-link">Gallery</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#gallery" class="nav-item">Gallery</a>
             </nav>
             <footer class="sidebar-footer">
                 <p><a href="mailto:sp-ru.xiu.lee@graduate.utm.my">Email</a> · <a href="https://www.instagram.com/ryus.l/">Instagram</a></p>
@@ -27,31 +56,23 @@
 
         <!-- Main Content -->
         <main class="main-content">
-            <div id="dynamic-content">
-                <h1 class="main-heading">Hello!</h1>
-                <p class="main-description">
-                    <strong><em>I'm Ru Xiu,</em></strong><br>
-                    <strong><em>a passionate Creative Developer,</em></strong><br>
-                    <strong><em>blending technology and artistry.</em></strong><br><br>
-                    <strong><em>Explore my journey through</em></strong><br>
-                    <strong><em>my projects and lomography.</em></strong>
-                </p>
-                <a href="#" id="projects-link-btn" class="btn">Projects &gt;</a>
+            <!-- Main Page -->
+            <div id="main-page" class="content-section">
+                <div id="particles-js" class="background"></div>
+                <div class="content">
+                    <h1 class="title">Hello!</h1>
+                    <p class="description">
+                        <b><i>I'm Ru Xiu,</i></b> <br>
+                        <b><i>a passionate Creative Developer</i></b>, <br>
+                        <b><i>blending technology and artistry.</i></b> <br>
+                        Explore my journey through projects and lomography.
+                    </p>
+                    <a href="#projects" class="link-arrow">Projects ></a>
+                </div>
             </div>
-        </main>
-    </div>
-</body>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const aboutLink = document.getElementById("about-link");
-        const projectsLink = document.getElementById("projects-link");
-        const galleryLink = document.getElementById("gallery-link");
-        const homeLink = document.getElementById("home-link");
-        const dynamicContent = document.getElementById("dynamic-content");
 
-        // About Section
-        aboutLink.addEventListener("click", () => {
-            dynamicContent.innerHTML = `
+            <!-- About Section -->
+            <div id="about" class="content-section">
                 <h1>About</h1>
                 <p>Hello! I'm Ru Xiu, a creative developer with a background in animation and a passion for blending technology and artistry. Currently pursuing my Bachelor's in Computer Science - Software Engineering at UTM, I strive to combine technical skills with design expertise to create unique digital experiences.</p>
                 <p><strong>Education:</strong></p>
@@ -65,14 +86,12 @@
                     <li>Design Tools: Adobe Illustrator, Photoshop, After Effects, Premiere Pro</li>
                     <li>Currently Learning: Figma</li>
                 </ul>
-            `;
-        });
+            </div>
 
-        // Projects Section
-        projectsLink.addEventListener("click", () => {
-            dynamicContent.innerHTML = `
+            <!-- Projects Section -->
+            <div id="projects" class="content-section">
                 <h1>Projects</h1>
-                <div>
+                <div class="project-item">
                     <h2>Kisha's Story - Life with Atopic Dermatitis</h2>
                     <p><strong>Role:</strong> Project Lead (2-person team)</p>
                     <p><strong>Description:</strong> This project brought Kisha's story to life through engaging animation and creative storytelling. I led:</p>
@@ -82,31 +101,14 @@
                         <li>Final video rendering with SFX, music.</li>
                     </ul>
                 </div>
-            `;
-        });
+            </div>
 
-        // Gallery Section
-        galleryLink.addEventListener("click", () => {
-            dynamicContent.innerHTML = `
+            <!-- Gallery Section -->
+            <div id="gallery" class="content-section">
                 <h1>Gallery</h1>
                 <p>Explore my collection of lomography and photography captured with my Sony NEX-6.</p>
-            `;
-        });
-
-        // Home Section
-        homeLink.addEventListener("click", () => {
-            dynamicContent.innerHTML = `
-                <h1 class="main-heading">Hello!</h1>
-                <p class="main-description">
-                    <strong><em>I'm Ru Xiu,</em></strong><br>
-                    <strong><em>a passionate Creative Developer,</em></strong><br>
-                    <strong><em>blending technology and artistry.</em></strong><br><br>
-                    <strong><em>Explore my journey through</em></strong><br>
-                    <strong><em>my projects and lomography.</em></strong>
-                </p>
-                <a href="#" id="projects-link-btn" class="btn">Projects &gt;</a>
-            `;
-        });
-    });
-</script>
+            </div>
+        </main>
+    </div>
+</body>
 </html>
