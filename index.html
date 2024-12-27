@@ -5,20 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ru Xiu | Creative Developer</title>
     <link rel="stylesheet" href="assets/styles.css">
-    <script defer src="assets/scripts.js"></script>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 20%;
+            background: #1f1f1f;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        .logo h1 {
+            color: #ffffff;
+            font-size: 1.5em;
+        }
+
+        .logo h1 a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .sidebar-nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            font-weight: bold;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar-nav a:hover {
+            color: #ff4d4d;
+        }
+
+        .sidebar-footer a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .sidebar-footer a:hover {
+            color: #ff4d4d;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            width: 80%;
+            overflow-y: auto;
+            padding: 20px;
+            position: relative;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .content-section {
+            display: none;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .content-section.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        a {
+            color: #ff4d4d;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.sidebar-nav a');
+            const sections = document.querySelectorAll('.content-section');
+
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    const target = e.target.getAttribute('href').replace('#', '');
+                    document.getElementById(target).classList.add('active');
+                });
+            });
+
+            // Default to "About" section
+            document.getElementById('about').classList.add('active');
+        });
+    </script>
 </head>
 <body>
     <div class="container">
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="logo">
-                <h1><a href="#about" id="home-link">RU XIU</a></h1>
+                <h1><a href="#" id="home-link">RU XIU</a></h1>
                 <p>Creative Developer</p>
             </div>
             <nav class="sidebar-nav">
-                <a href="#about" class="nav-item" id="about-link">About</a>
-                <a href="#projects" class="nav-item" id="projects-link">Projects</a>
-                <a href="#gallery" class="nav-item" id="gallery-link">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
             </nav>
             <footer class="sidebar-footer">
                 <p><a href="mailto:sp-ru.xiu.lee@graduate.utm.my">Email</a> · <a href="https://www.instagram.com/ryus.l/">Instagram</a></p>
@@ -40,19 +162,6 @@
                     <li>Programming: C++ (Beginner)</li>
                     <li>Design Tools: Adobe Illustrator, Photoshop, After Effects, Premiere Pro</li>
                     <li>Currently Learning: Figma (design prototyping)</li>
-                </ul>
-                <p><strong>Learning List:</strong></p>
-                <ul>
-                    <li>Unity (game development)</li>
-                    <li>Blender (3D modeling and animation)</li>
-                </ul>
-                <p><strong>Hobbies:</strong></p>
-                <ul>
-                    <li>Photography: Exploring lomography and using my Sony NEX-6 to capture high-quality, vibrant images.</li>
-                </ul>
-                <p><strong>Goals:</strong></p>
-                <ul>
-                    <li>Develop creative games, starting with a Tamagotchi-style project, and expand expertise in digital art and development.</li>
                 </ul>
             </section>
 
@@ -89,65 +198,5 @@
             </section>
         </main>
     </div>
-
-    <style>
-        .container {
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .sidebar {
-            width: 20%;
-            background: #1f1f1f;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        .main-content {
-            width: 80%;
-            background: #121212;
-            color: white;
-            overflow-y: auto;
-            padding: 20px;
-        }
-
-        .content-section {
-            display: none;
-        }
-
-        .content-section.active {
-            display: block;
-        }
-
-        .sidebar-nav a {
-            color: white;
-            text-decoration: none;
-            margin: 10px 0;
-        }
-
-        .sidebar-nav a:hover {
-            text-decoration: underline;
-        }
-    </style>
-
-    <script>
-        document.querySelectorAll('.sidebar-nav a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.querySelectorAll('.content-section').forEach(section => {
-                    section.classList.remove('active');
-                });
-                const targetId = e.target.getAttribute('href').substring(1);
-                document.getElementById(targetId).classList.add('active');
-            });
-        });
-
-        // Show "About" section by default
-        document.getElementById('about').classList.add('active');
-    </script>
 </body>
 </html>
