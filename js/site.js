@@ -6,6 +6,28 @@ $(document).ready(function () {
 		$('.video').simpleLightboxVideo();
 	}
 
+	$('.link-lightbox').on('click', function (e) {
+		e.preventDefault();
+		const videoId = $(this).data('videoid');
+		const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+
+		// Open lightbox or modal here with the video URL
+		const lightbox = `<div class="video-lightbox">
+			<div class="video-container">
+				<iframe src="${videoUrl}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				<span class="close-lightbox">&times;</span>
+			</div>
+		</div>`;
+
+		// Append the lightbox to the body
+		$('body').append(lightbox);
+
+		// Close lightbox functionality
+		$('.close-lightbox').on('click', function () {
+			$('.video-lightbox').remove();
+		});
+	});
+
 	/*ScrollUp*/
 	if (!!$.prototype.scrollUp) {
 		$.scrollUp();
@@ -13,7 +35,7 @@ $(document).ready(function () {
 
 	/*Responsive Navigation*/
 	$("#nav-mobile").html($("#nav-main").html());
-	$("#nav-trigger span").on("click",function() {
+	$("#nav-trigger span").on("click", function () {
 		if ($("nav#nav-mobile ul").hasClass("expanded")) {
 			$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
 			$(this).removeClass("open");
@@ -24,7 +46,7 @@ $(document).ready(function () {
 	});
 
 	$("#nav-mobile").html($("#nav-main").html());
-	$("#nav-mobile ul a").on("click",function() {
+	$("#nav-mobile ul a").on("click", function () {
 		if ($("nav#nav-mobile ul").hasClass("expanded")) {
 			$("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
 			$("#nav-trigger span").removeClass("open");
@@ -44,9 +66,7 @@ $(document).ready(function () {
 			$('#header').removeClass('nav-solid fadeInDown');
 		}
 	});
-
 });
-
 
 /* Preloader and animations */
 $(window).load(function () { // makes sure the whole site is loaded
@@ -63,5 +83,4 @@ $(window).load(function () { // makes sure the whole site is loaded
 	if (!!$.prototype.enllax) {
 		$(window).enllax();
 	}
-
 });
