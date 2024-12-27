@@ -3,70 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ru Xiu | E-Portfolio</title>
+    <title>Ru Xiu | Creative Developer</title>
     <link rel="stylesheet" href="assets/styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
 <body>
     <div class="container">
-        <!-- Left Navigation -->
-        <aside class="navigation">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
             <div class="logo">
-                <h1>Ru Xiu</h1>
+                <h1>RU XIU</h1>
                 <p>Creative Developer</p>
             </div>
-            <nav>
+            <nav class="sidebar-nav">
                 <a href="#work">Work</a>
                 <a href="#projects">Projects</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#about">About</a>
             </nav>
-            <div class="contact">
+            <footer class="sidebar-footer">
                 <p><a href="mailto:your_email@example.com">Email</a> · <a href="https://www.instagram.com/ryus.l/">Instagram</a></p>
-            </div>
+            </footer>
         </aside>
 
-        <!-- Right Main Content -->
+        <!-- Main Content -->
         <main class="main-content">
-            <div class="particles" id="particles-js"></div>
+            <div id="particles-js" class="background"></div>
             <div class="content">
                 <h1>Hello!</h1>
                 <p>
-                    I'm Ru Xiu, a Computer Science student blending creativity and technology. Explore my projects and lomography journey.
+                    I'm Ru Xiu, a passionate Creative Developer, blending technology and artistry. Explore my journey through projects and lomography.
                 </p>
-                <a href="#projects" class="btn">View Work</a>
+                <a href="#work" class="btn">View Work</a>
             </div>
         </main>
     </div>
 
-    <!-- Particle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <!-- Particle Effects Initialization -->
     <script>
         particlesJS('particles-js', {
             particles: {
                 number: { value: 80, density: { enable: true, value_area: 800 } },
                 color: { value: '#ffffff' },
-                shape: {
-                    type: 'circle',
-                    stroke: { width: 0, color: '#000000' },
-                    polygon: { nb_sides: 5 },
-                },
-                opacity: { value: 0.5, random: false },
+                shape: { type: 'circle', polygon: { nb_sides: 5 } },
+                opacity: { value: 0.5, random: true },
                 size: { value: 3, random: true },
                 line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
-                move: {
-                    enable: true,
-                    speed: 3,
-                    direction: 'none',
-                    random: false,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false,
-                },
+                move: { enable: true, speed: 3, random: false, straight: false, out_mode: 'out' },
             },
             interactivity: {
                 detect_on: 'canvas',
                 events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
-                modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, repulse: { distance: 200 } },
+                modes: { repulse: { distance: 200 }, grab: { distance: 400 } },
             },
             retina_detect: true,
         });
