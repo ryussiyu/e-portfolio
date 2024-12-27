@@ -4,60 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ru Xiu | Creative Developer</title>
+    <!-- Link to styles -->
     <link rel="stylesheet" href="assets/styles.css">
     <script defer src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 </head>
-    
-<script>
-    particlesJS('particles-js', {
-        particles: {
-            number: { value: 80, density: { enable: true, value_area: 800 } },
-            color: { value: '#ffffff' },
-            shape: { type: 'circle' },
-            opacity: { value: 0.5, random: true },
-            size: { value: 3, random: true },
-            line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
-            move: { enable: true, speed: 3, direction: 'none', out_mode: 'out' },
-        },
-        interactivity: {
-            detect_on: 'canvas',
-            events: {
-                onhover: { enable: true, mode: 'repulse' },
-                onclick: { enable: true, mode: 'push' },
-            },
-            modes: {
-                repulse: { distance: 200 },
-                push: { particles_nb: 4 },
-            },
-        },
-        retina_detect: true,
-    });
-
-    console.log('Particle.js Initialized Successfully!');
-</script>
-
 <body>
-    <div id="particles-js"></div>
-        <!-- Left Sidebar -->
+    <div class="container">
+        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="logo">
                 <h1>RU XIU</h1>
                 <p>Creative Developer</p>
             </div>
-            <nav class="sidebar-nav">
+            <nav>
                 <a href="#work">Work</a>
                 <a href="#projects">Projects</a>
                 <a href="#gallery">Gallery</a>
                 <a href="#about">About</a>
             </nav>
-            <footer class="sidebar-footer">
+            <footer>
                 <p><a href="mailto:your_email@example.com">Email</a> · <a href="https://www.instagram.com/ryus.l/">Instagram</a></p>
             </footer>
         </aside>
 
         <!-- Main Content -->
         <main class="main-content">
-            <div id="particles-js" class="background"></div>
+            <div id="particles-js"></div>
             <div class="content">
                 <h1>Hello!</h1>
                 <p>
@@ -68,25 +40,33 @@
         </main>
     </div>
 
-    <!-- Particle Effects Initialization -->
+    <!-- Particle.js Initialization -->
     <script>
         particlesJS('particles-js', {
             particles: {
                 number: { value: 80, density: { enable: true, value_area: 800 } },
                 color: { value: '#ffffff' },
-                shape: { type: 'circle', polygon: { nb_sides: 5 } },
+                shape: { type: 'circle' },
                 opacity: { value: 0.5, random: true },
                 size: { value: 3, random: true },
                 line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 3, random: false, straight: false, out_mode: 'out' },
+                move: { enable: true, speed: 3, direction: 'none', out_mode: 'out' },
             },
             interactivity: {
                 detect_on: 'canvas',
-                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } },
-                modes: { repulse: { distance: 200 }, grab: { distance: 400 } },
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                },
+                modes: {
+                    repulse: { distance: 200 },
+                    push: { particles_nb: 4 },
+                },
             },
             retina_detect: true,
         });
+
+        console.log('Particle.js Initialized Successfully!');
     </script>
 </body>
 </html>
