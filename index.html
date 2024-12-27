@@ -6,6 +6,37 @@
     <title>Ru Xiu | Creative Developer</title>
     <link rel="stylesheet" href="assets/styles.css">
     <script defer src="assets/scripts.js"></script>
+    <style>
+        /* Main Page Background */
+        #main-page {
+            background: url('images/Japan_01.jpg') no-repeat center center;
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* Gallery Styling */
+        #gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            padding: 20px;
+        }
+
+        #gallery img {
+            width: 100%;
+            height: auto;
+            transform: scale(0.5); /* 50% Scaling */
+            transition: transform 0.3s ease;
+        }
+
+        #gallery img:hover {
+            transform: scale(1); /* Return to normal scale when hovered */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -38,75 +69,30 @@
                 </p>
                 <a href="#" id="projects-link-btn" class="btn">Projects &gt;</a>
             </div>
+
+            <!-- Gallery Section -->
+            <div id="gallery" class="content-section">
+                <h1>Gallery</h1>
+                <p>Explore my collection of lomography and photography captured with my Sony NEX-6.</p>
+                <div class="gallery-images">
+                    <img src="images/Japan_01.jpg" alt="Japan Photo 01">
+                    <img src="images/Japan_02.jpg" alt="Japan Photo 02">
+                    <img src="images/Japan_03.jpg" alt="Japan Photo 03">
+                    <img src="images/Japan_04.jpg" alt="Japan Photo 04">
+                    <img src="images/Japan_05.jpg" alt="Japan Photo 05">
+                    <img src="images/Japan_06.jpg" alt="Japan Photo 06">
+                    <img src="images/Japan_07.jpg" alt="Japan Photo 07">
+                    <img src="images/Japan_08.jpg" alt="Japan Photo 08">
+                    <img src="images/Japan_09.jpg" alt="Japan Photo 09">
+                    <img src="images/Vietnam_01.jpg" alt="Vietnam Photo 01">
+                    <img src="images/Vietnam_02.jpg" alt="Vietnam Photo 02">
+                    <img src="images/Vietnam_03.jpg" alt="Vietnam Photo 03">
+                    <img src="images/Vietnam_04.jpg" alt="Vietnam Photo 04">
+                    <img src="images/Vietnam_05.jpg" alt="Vietnam Photo 05">
+                    <img src="images/Vietnam_06.jpg" alt="Vietnam Photo 06">
+                </div>
+            </div>
         </main>
     </div>
 </body>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const aboutLink = document.getElementById("about-link");
-        const projectsLink = document.getElementById("projects-link");
-        const galleryLink = document.getElementById("gallery-link");
-        const homeLink = document.getElementById("home-link");
-        const dynamicContent = document.getElementById("dynamic-content");
-
-        // About Section
-        aboutLink.addEventListener("click", () => {
-            dynamicContent.innerHTML = `
-                <h1>About</h1>
-                <p>Hello! I'm Ru Xiu, a creative developer with a background in animation and a passion for blending technology and artistry. Currently pursuing my Bachelor's in Computer Science - Software Engineering at UTM, I strive to combine technical skills with design expertise to create unique digital experiences.</p>
-                <p><strong>Education:</strong></p>
-                <ul>
-                    <li>Bachelor's in Computer Science - Software Engineering at UTM</li>
-                    <li>Diploma in Animation</li>
-                </ul>
-                <p><strong>Skills & Tools:</strong></p>
-                <ul>
-                    <li>Programming: C++ (Beginner)</li>
-                    <li>Design Tools: Adobe Illustrator, Photoshop, After Effects, Premiere Pro</li>
-                    <li>Currently Learning: Figma</li>
-                </ul>
-            `;
-        });
-
-        // Projects Section
-        projectsLink.addEventListener("click", () => {
-            dynamicContent.innerHTML = `
-                <h1>Projects</h1>
-                <div>
-                    <h2>Kisha's Story - Life with Atopic Dermatitis</h2>
-                    <p><strong>Role:</strong> Project Lead (2-person team)</p>
-                    <p><strong>Description:</strong> This project brought Kisha's story to life through engaging animation and creative storytelling. I led:</p>
-                    <ul>
-                        <li>Designing characters and elements.</li>
-                        <li>Animating scenes and transitions.</li>
-                        <li>Final video rendering with SFX, music.</li>
-                    </ul>
-                </div>
-            `;
-        });
-
-        // Gallery Section
-        galleryLink.addEventListener("click", () => {
-            dynamicContent.innerHTML = `
-                <h1>Gallery</h1>
-                <p>Explore my collection of lomography and photography captured with my Sony NEX-6.</p>
-            `;
-        });
-
-        // Home Section
-        homeLink.addEventListener("click", () => {
-            dynamicContent.innerHTML = `
-                <h1 class="main-heading">Hello!</h1>
-                <p class="main-description">
-                    <strong><em>I'm Ru Xiu,</em></strong><br>
-                    <strong><em>a passionate Creative Developer,</em></strong><br>
-                    <strong><em>blending technology and artistry.</em></strong><br><br>
-                    <strong><em>Explore my journey through</em></strong><br>
-                    <strong><em>my projects and lomography.</em></strong>
-                </p>
-                <a href="#" id="projects-link-btn" class="btn">Projects &gt;</a>
-            `;
-        });
-    });
-</script>
 </html>
