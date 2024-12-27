@@ -21,6 +21,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 20px;
+    cursor: pointer;
 }
 
 .sidebar-nav a {
@@ -29,6 +30,7 @@ body {
     margin: 15px 0;
     font-weight: bold;
     display: block;
+    cursor: pointer;
 }
 
 .sidebar-footer {
@@ -62,11 +64,13 @@ body {
 
 .title {
     font-size: 3rem;
+    font-weight: bold;
 }
 
 .description {
     font-size: 1.2rem;
     margin-top: 10px;
+    font-weight: 600;
 }
 
 .link-arrow {
@@ -74,28 +78,5 @@ body {
     text-decoration: none;
     font-size: 1rem;
     margin-top: 20px;
-}
-
-/* Sections Styling */
-.section {
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.project-item img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.project-item h3 {
-    font-size: 1.2rem;
-    color: white;
+    display: inline-block;
 }
