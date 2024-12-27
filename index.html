@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ru Xiu's E-Portfolio</title>
     <style>
+        /* Reset and Base Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -12,58 +13,58 @@
             color: #333;
         }
 
+        /* Header Section */
         header {
-            background: url('https://scontent.fkul5-3.fna.fbcdn.net/v/t39.30808-6/468955694_10161185061389737_3338793373557498522_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cf85f3&_nc_ohc=-G2_yW2CZtQQ7kNvgFTvP-H&_nc_zt=23&_nc_ht=scontent.fkul5-3.fna&_nc_gid=AhW7q-u97uco6JtejspIqq1&oh=00_AYDk6Kbt7UQn92Yw8rU_QqmUnd31_DZtvKhHhGSLgH0ixA&oe=67744FF1') no-repeat center center/cover;
+            background: url('https://scontent.fkul5-3.fna.fbcdn.net/v/t39.30808-6/468955694_10161185061389737_3338793373557498522_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=cf85f3&_nc_ohc=-G2_yW2CZtQQ7kNvgFTvP-H&_nc_zt=23&_nc_ht=scontent.fkul5-3.fna&_nc_gid=AhW7q-u97uco6JtejspIqq1&oh=00_AYDk6Kbt7UQqmUnd31_DZtvKhHhGSLgH0ixA&oe=67744FF1') no-repeat center center/cover;
             color: white;
-            text-align: center;
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            padding: 20px;
+            text-align: center;
         }
 
         header h1 {
-            font-size: 3em;
+            font-size: 4em;
             margin: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
+            text-transform: uppercase;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
             border-radius: 5px;
         }
 
         header p {
-            font-size: 1.2em;
-            margin: 10px 0 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 5px 10px;
+            font-size: 1.5em;
+            margin: 10px 0;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 5px 15px;
             border-radius: 5px;
         }
 
         nav {
-            text-align: center;
-            margin: 20px 0;
+            margin-top: 20px;
         }
 
         nav a {
-            margin: 0 10px;
-            color: #0056b3;
+            margin: 0 15px;
+            color: #fff;
+            font-size: 1.2em;
             text-decoration: none;
-            font-size: 1.1em;
         }
 
         nav a:hover {
             text-decoration: underline;
         }
 
+        /* About Section */
         section {
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
             background: white;
             margin: 20px auto;
             border-radius: 10px;
-            width: 90%;
-            max-width: 800px;
+            max-width: 900px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
@@ -76,12 +77,32 @@
             line-height: 1.6;
         }
 
+        /* Gallery Section */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
             background: #333;
             color: white;
-            margin-top: 40px;
         }
 
         footer a {
@@ -95,27 +116,35 @@
     </style>
 </head>
 <body>
+    <!-- Hero Section -->
     <header>
         <h1>Ru Xiu's E-Portfolio</h1>
-        <p>A showcase of my journey in Computer Science and Lomography</p>
+        <p>A journey through Computer Science and Lomography</p>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Lomography</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
+    <!-- About Section -->
     <section id="about">
         <h2>👤 About Me</h2>
-        <p>Hi, I’m Ru Xiu, a Computer Science student at UTM with a background in Animation. I love combining creativity and technology to build meaningful projects. My interests include game development, design, and exploring lomography.</p>
+        <p>Hi, I’m Ru Xiu, a Computer Science student at UTM with a background in Animation. I love combining creativity and technology to build meaningful projects. My interests include game development, design, and lomography.</p>
     </section>
 
+    <!-- Gallery Section -->
     <section id="projects">
-        <h2>💻 Projects</h2>
-        <p><b>Tamagotchi-Style Game (Work-in-Progress):</b> A collaborative project using C++ to create a virtual pet simulation. This project focuses on learning game logic and improving my programming fundamentals.</p>
+        <h2>📷 Lomography</h2>
+        <div class="gallery">
+            <img src="https://via.placeholder.com/400" alt="Lomography 1">
+            <img src="https://via.placeholder.com/400" alt="Lomography 2">
+            <img src="https://via.placeholder.com/400" alt="Lomography 3">
+            <img src="https://via.placeholder.com/400" alt="Lomography 4">
+        </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
         <h2>📬 Contact Me</h2>
         <p>Connect with me on Instagram: <a href="https://www.instagram.com/ryus.l/">@ryus.l</a></p>
