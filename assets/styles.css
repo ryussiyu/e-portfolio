@@ -64,6 +64,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
+    text-align: center;
 }
 
 /* Button */
@@ -89,7 +90,43 @@ body {
     z-index: -1;
 }
 
-/* Content Styling */
-.content {
+/* About Section */
+.about-section {
+    padding: 40px;
     text-align: center;
+    color: white;
+    background: #1f1f1f;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff4c4c;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Lomography Gallery */
+.lomography-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.lomography-gallery img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lomography-gallery img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
