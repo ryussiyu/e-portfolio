@@ -124,7 +124,7 @@ a:hover, #header.nav-solid nav a:hover {
 /* Banner Background and Text Colors */
 
 #banner {
-    background: url("../images/banner-images/Japan_01.jpg") no-repeat center top;
+    background: url("../images/banner-images/Japan_01.png") no-repeat center top;
     background-size:cover;
 }
 
